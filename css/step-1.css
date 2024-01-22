@@ -1,0 +1,159 @@
+.main-top-section {
+    width: 100%;
+    height: 700px;
+    background:url(../photos/banner.jpg);
+    position: relative;
+    
+}
+
+.item-top-section{
+    display: flex;
+    padding-left:250px ;
+}
+.item-top {
+
+    
+    width: 750px;
+    height: 400px;
+    display: flex;
+    position: relative;
+    z-index: 1;
+    top: 150px;
+
+
+  
+}
+
+.top-header {
+    width: 100%;
+    height: 70px;
+    text-align: center;
+    background: #ffffff;
+}
+
+/*  Step-1 You need to get all of these elements to line up side by side. What display property would do this for you? */
+
+.menu {
+    width: 300px;
+    height: 40px;
+    background: #ffffff;
+    float: none;
+    display: inline-block;
+    padding-top:10px ;
+   
+    
+}
+.submenu li a {
+    text-decoration: none; 
+    cursor: pointer; 
+}
+
+.logo {
+    width: 206px;
+    height: 35px;    
+    background: #ffffff;
+    float:left;
+    background:url(../photos/logo.PNG) no-repeat;
+    margin-top:10px ;
+
+
+}
+.submenu {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px;
+    padding-right: 5pc;
+}
+
+
+.sign-in {
+    width: 120px;
+    height: 40px;
+    background: #ffffff;
+    float: right;
+    padding-top:10px ;
+
+}
+.text1 {
+    font-size: 75px;
+    display: block;
+    position: absolute;
+    top: 90px;
+}
+.recherche-nav{
+    margin: 0 auto 30px;
+    background: #ffffff;
+    width: 1300px;
+    height: 100px;
+    position: relative;
+    z-index: 1;
+    bottom: 106px;
+    border-radius: 20px;
+}
+.button1{
+    display: flex;
+    position: relative ;
+    top: 50px;
+   
+    flex-direction: column;
+    margin: auto;
+}
+.button1 button{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    position: relative;
+    z-index: 1;
+    right: 25%;
+    top: 50%;
+    width: 100px;
+    height: 30px;
+    text-align: center;
+    
+}
+.recherche-nav .flex-containr-search-bar{
+    position: relative;
+    display: flex;
+    gap: 50px;
+    padding-top: 40px;
+    padding-right: 140px;
+    padding-bottom: 20px;
+    padding-left: 200px;
+}
+
+.section-car .section-car-img{
+    
+    width: 100%;
+    height: 230px;
+    background: url(../photos/Explorecars.PNG) no-repeat;
+    position: relative;
+    bottom: 40px;
+}
+
+.recherche-nav .flex-containr-filtre-bar{
+    position: relative;
+    display: flex;
+    gap: 150px;
+    padding-top: 40px;
+    padding-right: 140px;
+    padding-bottom: 20px;
+    padding-left: 100px;
+}
+.button-filtre{
+    width: 100px;
+    height: 50px;
+
+}
+.main-filtre-section{
+
+    
+    bottom: 42px;
+    position: relative;
+    width: 100%;
+    background-color:#F2F7F6 ;
+
+}
+    
