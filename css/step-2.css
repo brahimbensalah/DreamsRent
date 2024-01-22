@@ -190,10 +190,18 @@ padding-left: 50px;
     background-color: white;
 }
 .container-pub2{
-    background-color: aqua;
+   
     width: 100%;
     height: 493px;
     background: url(../photos/factsnumbers.PNG) no-repeat;
+    position: relative;
+    bottom: 40px;
+}
+.container-pub3{
+   
+    width: 100%;
+    height: 600px;
+    background: url(../photos/whychooseus.PNG) no-repeat;
     position: relative;
     bottom: 40px;
 }
