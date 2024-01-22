@@ -13,7 +13,7 @@
     <body style="background-color:#FCFBFB;">
 		<main class="main-wrapper">
 			<section class="main-top-section">
-				<!--header-->
+<!--header-->
 				<header class="top-header">
 					<div class="logo"></div>
 
@@ -45,27 +45,38 @@
 						<div class="item-top"><img src="photos/car-right.png" alt=""></div>
 					</div>
                     <div class="button1">
-                        <button>
-                            View all Cars
+                        <button>        
+                         <a id="button1">View all Cars</a>
+                            
 
 
                         </button>
 
                     </div>
 				</header>
-				<!--/header-->
+<!--/header-->
 			</section>
-            <!--section reasrch-->
-            
+
+<!--section reasrch------------------------------------------>
             <section class="main-bottom-section" >
                     <div class="recherche-nav">
                         <div class="flex-containr-search-bar">
                             <div>
-                                <span>Pickup Location
-                                </span>
-                                <input type="text" id="adress" name="adress" value="Enter City" >
+                                <span>Pickup Model</span>
+                                
+                                            <select name="model" id="model">
+                                            <option value="">--Please choose an option--</option>
+                                            <option value="Mazda">Mazda</option>
+                                            <option value="Audi">Audi</option>
+                                            <option value="Honda">Honda</option>
+                                            <option value="Toyota">Toyota</option>
+                                            <option value="Acura">Acura</option>
+                                            <option value="Tesla">Tesla</option>
+                                            <option value="Fiat">Tesla</option>
+                                            <option value="Tesla">BMW</option>
+                                            </select>
                             </div>
-                            <div>
+                        <div>
                                 <span>Pickup Date</span>
                                 <input type="Date" id="Pickup-Date" name="Pickup-Date" value="04/11/2023">
     
@@ -79,7 +90,7 @@
                             </div>
                         
                         
-                        <button>
+                        <button id="botton2">
                             Search
     
                         </button>
@@ -88,37 +99,35 @@
 
 
             </section>
-            <!--section reasrch-->
+<!--section reasrch--------------------------------------->
 
 
-             <!--section pub-->
+<!--section pub-------------------------------------->
             <section class="container-pub">
-                <div class="container-pub">
-
-                </div>
+                <div class="container-pub"></div>
             </section>
-             <!--section pub-->
+<!--section pub---------------------------------------------->
 
 
 
-             <!--section Cars-->
-            <section class="section-car">
+ <!--section Cars--------------------------------------->
+            <section class="section-car" id="cars">
             <div class="section-car-img">
             </section>
-             <!--section filtre-->
+ <!--section filtre------------------------------------>
             
              <section class="main-filtre-section"  >
                 <div class="recherche-filtre">
                     <div class="flex-containr-filtre-bar ">
-                        <div ><button class="button-filtre">Honsa</button>                 
+                        <div ><button value="Honda"   id="Honda" class="button-filtre">Honda</button>                 
                         </div>
-                        <div><button class="button-filtre">Audi</button>                          
+                        <div><button  value="Audi"  id="Audi" class="button-filtre">Audi</button>                          
                         </div>
-                        <div><button class="button-filtre">Toyota</button>
+                        <div><button value="Toyota" id="Toyota" class="button-filtre">Toyota</button>
                         </div>
-                        <div><button class="button-filtre">Acura</button>
+                        <div><button value="Acura" id="Acura" class="button-filtre">Acura</button>
                         </div>
-                        <div><button class="button-filtre">Tesla</button>
+                        <div><button  value="Tesla" id="Tesla" class="button-filtre">Tesla</button>
                         </div>
                     
                     
@@ -128,11 +137,11 @@
 
 
         </section>
-        <!--//section filtre-->
+<!--//section filtre----------------------------------->
 
 
 
-             <!--//section car-list-->
+<!--//section car-list-------------------------------->
             <section class="section-cars-list">
                     
 
@@ -152,8 +161,8 @@
                         <div class="car-description">
 
 
-                            <div class="item-description">
-                                text
+                            <div class="item-description" >
+                                <p></p>
 
                             </div>
                             <div class="item-description">
@@ -196,7 +205,7 @@
 
                         </div>
                         <div class="Rent">
-                            <button class="Rent-botton">
+                            <button class="button Rent-botton" id="rentcars">
                                 Rent Now
                             </button>
 
@@ -743,22 +752,24 @@
 			</div>
            
 			</section>
-            <!--//section car-list-->
+<!--//section car-list-------------------------------->
 
-                   <!--section pub2-->
+ <!--section pub2------------------------------------>
                    <section class="container-pub">
                     <div class="container-pub2">
     
                     </div>
                 </section>
-                 <!--//section pub3-->
-                    <!--section pub3-->
+<!--//section pub3--------------------------------->
+
+
+<!--section pub3---------------------------------->
                     <section class="container-pub">
                         <div class="container-pub3">
         
                         </div>
                     </section>
-                     <!--section pub3-->
+ <!--section pub3-------------------------------->
 
 
 
@@ -774,6 +785,7 @@
 
  <script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
  <script src="js/index.js"></script>
+ <script src="js/clases.js"></script>
 
 </body>
 </html>
