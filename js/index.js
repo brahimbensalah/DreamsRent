@@ -1,4 +1,13 @@
 $(document).ready(function(){
+
+   
+
+
+
+
+
+
+
    var array=garage.listAllCars()   
    for(var i=0;i<=array.length-1;i++)
    {
@@ -434,9 +443,10 @@ $('#addcars').on('click',function(){
      
    } 
    
-   alert('your cart has addet')
+   alert(`your ${model} with ${color} / type= ${type}/ located in ${location} / state= ${state} `)
 })
    /******************************Delete cars************************************************************ */
+
 
     
    $('#deletecar').on('click',function(){
@@ -469,7 +479,8 @@ $('#modify').on('click',function(){
    console.log(model)
   
 
-     alert('your car has modify')   
+        alert(`your ${model} with ${color} / type= ${type}/ located in ${location} / state= ${state} has modifyed `)
+
   })
   
 
