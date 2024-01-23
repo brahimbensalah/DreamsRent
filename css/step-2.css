@@ -28,6 +28,7 @@ padding-top: 50px;
 padding-right: 50px;
 padding-bottom: 50px;
 padding-left: 50px;
+flex-wrap: wrap
 
 
 
@@ -101,6 +102,8 @@ padding-left: 50px;
     position: relative;
     bottom: 65px;
     border-radius: 10px;
+    flex-wrap: wrap;
+    display: flex;
    
 }
 

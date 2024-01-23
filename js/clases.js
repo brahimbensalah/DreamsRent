@@ -55,21 +55,21 @@ function Rent(){
 
 }
 var id=GenerateID()
-function Cars(model,type,color,etat,state,price){
+function Cars(model,type,color,location,state,price){
     
     return{
         id:id(),      
         model:model,
         type:type,
         color:color,
-        etat:etat,
+        location:location,
         state:state,
         price:price
     }
 
 }
-function addCars(model,type,color,etat,state,price){
-    this.array.push(Cars(model,type,color,etat,state,price))
+function addCars(model,type,color,location,state,price){
+    this.array.push(Cars(model,type,color,location,state,price))
     this.numberOfCars=this.array.length
 }
 function GenerateID(){
@@ -81,7 +81,7 @@ function GenerateID(){
 function listcar(obj){
    
         console.log(' | id= '+obj['id']+' | model= '+obj['model']+' | type= '+obj['type']+
-        " | color= "+obj['color']+" | etat"+obj['etat']+
+        " | color= "+obj['color']+" | location"+obj['location']+
         " | state "+obj['state']+" | price "+obj['price']   )
 
     
@@ -126,7 +126,7 @@ function listCarsByModel(model){
         return  element.model===model
 })
  
- return listCars(arr)
+ return arr
 }
 function removeCars(id){
    each(this.array,function(element,i){
@@ -140,14 +140,14 @@ function removeCars(id){
    })
 
 }
-function modifyCars(id,model,type,color,etat,state,price){
+function modifyCars(id,model,type,color,location,state,price){
     each(this.array,function(element,i){
         if(element.id===id)
         {
            element.model=model
            element.type=type
            element.color=color
-           element.etat=etat
+           element.location=location
            element.state=state
            element.price=price   
         }
@@ -177,17 +177,17 @@ function getPrice(model,dateP,dateR){
 
 var garage=Rent()
 
-garage.addCars("Audi","type1","red","etat1",true,100)
-garage.addCars("Mazda","type2","black","etat1",false,100)
-garage.addCars("Mazda","type2","black","etat1",false,100)
+garage.addCars("Audi","type1","red","Germany",true,100)
+garage.addCars("Mazda","type2","black","Belgium",false,100)
+garage.addCars("Mazda","type2","black","Newyork,USA",false,100)
 
-garage.addCars("Mazda","type2","black","etat1",false,100)
+garage.addCars("Mazda","type2","black","Dallas",false,100)
 
-garage.addCars("Honda","type3","green","etat1",true,100)
-garage.addCars("Toyota","type4","blue","etat1",false,100)
-garage.addCars("Tesla","type5","white","etat1",true,100)
-garage.addCars("Fiat","type6","gris","etat1",false,100)
-garage.addCars("BMW","type7","oronge","etat1",true,100)
-garage.addCars("Acura","type8","color1","etat1",false,100)
+garage.addCars("Honda","type3","green","Spain",true,100)
+garage.addCars("Toyota","type4","blue","Newyork",false,100)
+garage.addCars("Tesla","type5","white","tunis",true,100)
+garage.addCars("Fiat","type6","gris","Dallas",false,100)
+garage.addCars("BMW","type7","oronge","Germany",true,100)
+garage.addCars("Acura","type8","color1","tunis",false,100)
 
 garage.array
