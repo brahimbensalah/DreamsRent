@@ -2,14 +2,13 @@ $(document).ready(function(){
    var array=garage.listAllCars()   
    for(var i=0;i<=array.length-1;i++)
    {
-     for(key in array[i])
-     {
+    
 
        $('.car').append(`<div class="item-car">
        <div class="content-car">
 
            <div class="profile-image-container" >
-               <img src="./photos/car-8.jpg" alt="" style="width: 100%;height: 100%;border-radius:20px;">
+               <img src="./photos/car${i}.JPEG" alt="" style="width: 100%;height: 100%;border-radius:20px;">
            </div>
 
            <div class="car-name">
@@ -40,7 +39,7 @@ $(document).ready(function(){
 
        </div>
    </div>`)
-     }
+     
    } 
    /*****************************seaarch ********************************************* */ 
 
@@ -52,14 +51,13 @@ $(document).ready(function(){
       
        for(var i=0;i<=array.length-1;i++)
        {
-         for(key in array[i])
-         {
+         
 
            $('.car').append(`<div class="item-car">
            <div class="content-car">
 
                <div class="profile-image-container" >
-                   <img src="./photos/car-8.jpg" alt="" style="width: 100%;height: 100%;border-radius:20px;">
+                   <img src="./photos/car${i}.JPEG" alt="" style="width: 100%;height: 100%;border-radius:20px;">
                </div>
 
                <div class="car-name">
@@ -91,25 +89,22 @@ $(document).ready(function(){
            </div>
        </div>`)
          }
-       }
-
     })
     $(".botton2").click(function(){
       $("#botton2").attr("href", "#cars");
        var model= $("#model").val();  
        $('.car').empty()  
        var array=garage.listCarsByModel(model)   
-       console.log(array)
+
        for(var i=0;i<=array.length-1;i++)
        {
-         for(key in array[i])
-         {
+         
 
            $('.car').append(`<div class="item-car">
            <div class="content-car">
 
                <div class="profile-image-container" >
-                   <img src="./photos/car-8.jpg" alt="" style="width: 100%;height: 100%;border-radius:20px;">
+                   <img src="./photos/car${i}.JPEG" alt="" style="width: 100%;height: 100%;border-radius:20px;">
                </div>
 
                <div class="car-name">
@@ -141,7 +136,6 @@ $(document).ready(function(){
            </div>
        </div>`)
          }
-       }
 
     })
     $("#Honda").click(function(){
@@ -149,16 +143,16 @@ $(document).ready(function(){
         $('.car').empty()
 
         var array=garage.listCarsByModel(model)   
+        $('.car').empty()
         for(var i=0;i<=array.length-1;i++)
         {
-          for(key in array[i])
-          {
+          
  
             $('.car').append(`<div class="item-car">
             <div class="content-car">
  
                 <div class="profile-image-container" >
-                    <img src="./photos/car-8.jpg" alt="" style="width: 100%;height: 100%;border-radius:20px;">
+                    <img src="./photos/car${i}.JPEG" alt="" style="width: 100%;height: 100%;border-radius:20px;">
                 </div>
  
                 <div class="car-name">
@@ -190,68 +184,65 @@ $(document).ready(function(){
             </div>
         </div>`)
           }
-        }
      })
      
     $("#Audi").click(function(){
-        var model= $("#Audi").val();       
+        var model= $("#Audi").val(); 
+        $('.car').empty()       
      var array=garage.listCarsByModel(model)   
-        for(var i=0;i<=array.length-1;i++)
-        {
-          for(key in array[i])
-          {
- 
-            $('.car').append(`<div class="item-car">
-            <div class="content-car">
- 
-                <div class="profile-image-container" >
-                    <img src="./photos/car-8.jpg" alt="" style="width: 100%;height: 100%;border-radius:20px;">
-                </div>
- 
-                <div class="car-name">
-                    <span class="text-name-car">${array[i].model}</span><hr>
-                </div>
-                <div class="car-description">
-                    <div class="item-description" > </div>
-                    <div class="item-description">text</div>
-                    <div class="item-description">text</div>
-                    <div class="item-description">text</div>
-                    <div class="item-description">text</div>
-                    <div class="item-description">text</div>
-                </div>
-                <div class="price" >
-                    <div style="float: left;position: relative;top:10px;left: 10px;">
-                    ${array[i].location}
-                    </div>
-                    <div style="float:right;position:relative;top:10px;right: 10px;">
-                    ${array[i].price}
-                    </div>
-                </div>
-                <div class="Rent">
-                    <button class="button Rent-botton" id="rentcars">
-                        Rent Now
-                    </button>
- 
-                </div>
- 
-            </div>
-        </div>`)
-          }
-        } 
+     for(var i=0;i<=array.length-1;i++)
+     {
+       
+
+         $('.car').append(`<div class="item-car">
+         <div class="content-car">
+
+             <div class="profile-image-container" >
+                 <img src="./photos/car${i+2}.JPEG" alt="" style="width: 100%;height: 100%;border-radius:20px;">
+             </div>
+
+             <div class="car-name">
+                 <span class="text-name-car">${array[i].model}</span><hr>
+             </div>
+             <div class="car-description">
+                 <div class="item-description" > </div>
+                 <div class="item-description">text</div>
+                 <div class="item-description">text</div>
+                 <div class="item-description">text</div>
+                 <div class="item-description">text</div>
+                 <div class="item-description">text</div>
+             </div>
+             <div class="price" >
+                 <div style="float: left;position: relative;top:10px;left: 10px;">
+                 ${array[i].location}
+                 </div>
+                 <div style="float:right;position:relative;top:10px;right: 10px;">
+                 ${array[i].price}
+                 </div>
+             </div>
+             <div class="Rent">
+                 <button class="button Rent-botton" id="rentcars">
+                     Rent Now
+                 </button>
+
+             </div>
+
+         </div>
+     </div>`)
+       }
      })
      $("#Toyota").click(function(){
-        var model= $("#Toyota").val();       
+        var model= $("#Toyota").val();  
+        $('.car').empty()      
      var array=garage.listCarsByModel(model)   
         for(var i=0;i<=array.length-1;i++)
         {
-          for(key in array[i])
-          {
  
             $('.car').append(`<div class="item-car">
             <div class="content-car">
  
                 <div class="profile-image-container" >
-                    <img src="./photos/car-8.jpg" alt="" style="width: 100%;height: 100%;border-radius:20px;">
+                    <img src="./photos/car${i+5}.JPEG" alt="" style="width: 100%;height: 100%;border-radius:20px;">
                 </div>
  
                 <div class="car-name">
@@ -283,7 +274,6 @@ $(document).ready(function(){
             </div>
         </div>`)
           }
-        } 
      })
      
      $("#Acura").click(function(){
@@ -292,14 +282,13 @@ $(document).ready(function(){
      var array=garage.listCarsByModel(model)   
         for(var i=0;i<=array.length-1;i++)
         {
-          for(key in array[i])
-          {
+         
  
             $('.car').append(`<div class="item-car">
             <div class="content-car">
  
                 <div class="profile-image-container" >
-                    <img src="./photos/car-8.jpg" alt="" style="width: 100%;height: 100%;border-radius:20px;">
+                    <img src="./photos/car${i+7}.JPEG" alt="" style="width: 100%;height: 100%;border-radius:20px;">
                 </div>
  
                 <div class="car-name">
@@ -330,7 +319,6 @@ $(document).ready(function(){
  
             </div>
         </div>`)
-          }
         } 
      })
      $("#Tesla").click(function(){
@@ -339,14 +327,13 @@ $(document).ready(function(){
      var array=garage.listCarsByModel(model)   
         for(var i=0;i<=array.length-1;i++)
         {
-          for(key in array[i])
-          {
+         
  
             $('.car').append(`<div class="item-car">
             <div class="content-car">
  
                 <div class="profile-image-container" >
-                    <img src="./photos/car-8.jpg" alt="" style="width: 100%;height: 100%;border-radius:20px;">
+                    <img src="./photos/car${i}.JPEG" alt="" style="width: 100%;height: 100%;border-radius:20px;">
                 </div>
  
                 <div class="car-name">
@@ -377,7 +364,6 @@ $(document).ready(function(){
  
             </div>
         </div>`)
-          }
         } 
      })
    /*****************************Rent caars ********************************************* */ 
@@ -387,28 +373,78 @@ $(document).ready(function(){
         var id=  $('#id-car').val();
         console.log(id);
         alert('your car has rented')
-        //garage.carRented(id)
+        garage.carRented(id)
      })
    /*****************************Add cars ********************************************* */ 
 $('#addcars').on('click',function(){
-   var type = $("#model").val();
+   var model = $("#model").val();
    var color = $("#color").val();
    var type = $("#type").val();
    var state = $("#state").val();
    var price = $("#Price").val();
    var location = $("#location").val();
+
+
+
+
    garage.addCars(model,type,color,location,state,price)
+   $('.car').empty() 
+   console.log(garage.array);
+   var array=garage.array
+   
+   for(var i=0;i<=array.length-1;i++)
+   {
+    
+
+       $('.car').append(`<div class="item-car">
+       <div class="content-car">
+
+           <div class="profile-image-container" >
+               <img src="./photos/car${i}.JPEG" alt="" style="width: 100%;height: 100%;border-radius:20px;">
+           </div>
+
+           <div class="car-name">
+               <span class="text-name-car">${array[i].model}</span><hr>
+           </div>
+           <div class="car-description">
+               <div class="item-description" > </div>
+               <div class="item-description">text</div>
+               <div class="item-description">text</div>
+               <div class="item-description">text</div>
+               <div class="item-description">text</div>
+               <div class="item-description">text</div>
+           </div>
+           <div class="price" >
+               <div style="float: left;position: relative;top:10px;left: 10px;">
+               ${array[i].location}
+               </div>
+               <div style="float:right;position:relative;top:10px;right: 10px;">
+               ${array[i].price}
+               </div>
+           </div>
+           <div class="Rent">
+               <button class="button Rent-botton" id="rentcars">
+                   Rent Now
+               </button>
+
+           </div>
+
+       </div>
+   </div>`)
+     
+   } 
+   
    alert('your cart has addet')
 })
    /******************************Delete cars************************************************************ */
 
     
    $('#deletecar').on('click',function(){
-      garage.removeCars()
+      garage.removeCars(id)
          alert('your car has removed')   
      })
 
-     /*****************************Mpdify car*************************************************** */
+     /*****************************Modify car*************************************************** */
    
           
 $('#modify').on('click',function(){

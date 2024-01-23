@@ -71,6 +71,7 @@ function Cars(model,type,color,location,state,price){
 function addCars(model,type,color,location,state,price){
     this.array.push(Cars(model,type,color,location,state,price))
     this.numberOfCars=this.array.length
+   // return this.array
 }
 function GenerateID(){
     var count=0
@@ -178,16 +179,16 @@ function getPrice(model,dateP,dateR){
 var garage=Rent()
 
 garage.addCars("Audi","type1","red","Germany",true,100)
-garage.addCars("Mazda","type2","black","Belgium",false,100)
-garage.addCars("Mazda","type2","black","Newyork,USA",false,100)
+garage.addCars("Mazda","type2","black","Belgium",false,200)
+garage.addCars("Mazda","type2","black","Newyork,USA",false,500)
 
-garage.addCars("Mazda","type2","black","Dallas",false,100)
+garage.addCars("Mazda","type2","black","Dallas",false,900)
 
-garage.addCars("Honda","type3","green","Spain",true,100)
-garage.addCars("Toyota","type4","blue","Newyork",false,100)
-garage.addCars("Tesla","type5","white","tunis",true,100)
-garage.addCars("Fiat","type6","gris","Dallas",false,100)
-garage.addCars("BMW","type7","oronge","Germany",true,100)
-garage.addCars("Acura","type8","color1","tunis",false,100)
+garage.addCars("Honda","type3","green","Spain",true,700)
+garage.addCars("Toyota","type4","blue","Newyork",false,850)
+garage.addCars("Tesla","type5","white","tunis",true,970)
+garage.addCars("Fiat","type6","gris","Dallas",false,600)
+garage.addCars("BMW","type7","oronge","Germany",true,147)
+garage.addCars("Acura","type8","color1","tunis",false,654)
 
 garage.array
