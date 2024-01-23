@@ -33,7 +33,7 @@
                                     <ul class="submenu">
                                         <li><a href="../index.html">Home</a></li>
                                         <li><a href="../html/Addcars.html">Cars</a></li>
-                                        <li><a href="../html/modify.html">modify</a></li>
+                                        <li><a href="../html/modify.html">remove</a></li>
             
                                     </ul>
                                 </div>
@@ -55,7 +55,9 @@
                                     <div class="item-top" style="margin-top: 70px;">
                                         <div class="testbox">
                                             <form>
-                                              <h1>ADD CARS</h1>
+                                              <h1>Modify CARS</h1>
+                                              <h4>id</h4>
+                                              <input id="id" type="text" name="price"/>
                                               <h4>Type of car<span>*</span></h4>
                                               <select id="model">
                                                 <option value=""></option>
@@ -98,9 +100,9 @@
                                               <input id="location" type="text" name="name"/>
                                               <h4>State<span>*</span></h4>
                                               <select id="state">
-                                                <option value="1"></option>
-                                                <option value="1">AV</option>
-                                                <option value="-1">NAV</option>
+                                                <option value=""></option>
+                                                <option value="AV">AV</option>
+                                                <option value="NAV">NAV</option>
                                                 </select>
                                               <h4>Price</h4>
                                               <input id="Price" type="text" name="price"/>
@@ -109,7 +111,7 @@
                                                 <textarea rows="5"></textarea>
 
                                             </form>
-                                            <button id="addcars">Add Cars</button>
+                                            <button id="modify">modify Cars</button>
 
 
 
@@ -124,7 +126,7 @@
                             </header>
             <!--/header-->
                         </section>
-        <footer class="footer" style="background-color: white;": white;> </footer>
+        <footer class="footer" style="background-color: white;": white;"> </footer>
 
     </main>
     <script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>

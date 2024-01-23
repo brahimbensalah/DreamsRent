@@ -42,6 +42,8 @@ $(document).ready(function(){
    </div>`)
      }
    } 
+   /*****************************seaarch ********************************************* */ 
+
     $('.button1').click(function(){
         $("#button1").attr("href", "#cars");
         $('.car').empty()
@@ -81,9 +83,6 @@ $(document).ready(function(){
                </div>
                <div class="Rent">
                    <button class="button Rent-botton" id="rentcars">
-                       Rent Now
-                   </button>
-                   <button class="button Rent-botton" id="delete">
                        Rent Now
                    </button>
 
@@ -381,6 +380,7 @@ $(document).ready(function(){
           }
         } 
      })
+   /*****************************Rent caars ********************************************* */ 
 
 
      $('#rentcars').click(function(){
@@ -388,28 +388,97 @@ $(document).ready(function(){
         console.log(id);
         //garage.carRented(id)
      })
-     
+   /*****************************Add cars ********************************************* */ 
 $('#addcars').on('click',function(){
-   var model = $("#model").val();
+   var type = $("#model").val();
    var color = $("#color").val();
    var type = $("#type").val();
    var state = $("#state").val();
    var price = $("#Price").val();
    var location = $("#location").val();
    garage.addCars(model,type,color,location,state,price)
-      alert('your car has aded')   
-  })
+   $('.car').empty()
+   for(var i=0;i<=array.length-1;i++)
+   {
+     for(key in array[i])
+     {
+
+       $('.car').append(`<div class="item-car">
+       <div class="content-car">
+
+           <div class="profile-image-container" >
+               <img src="./photos/car-8.jpg" alt="" style="width: 100%;height: 100%;border-radius:20px;">
+           </div>
+
+           <div class="car-name">
+               <span class="text-name-car">${array[i].model}</span><hr>
+           </div>
+           <div class="car-description">
+               <div class="item-description" > </div>
+               <div class="item-description">text</div>
+               <div class="item-description">text</div>
+               <div class="item-description">text</div>
+               <div class="item-description">text</div>
+               <div class="item-description">text</div>
+           </div>
+           <div class="price" >
+               <div style="float: left;position: relative;top:10px;left: 10px;">
+               ${array[i].location}
+               </div>
+               <div style="float:right;position:relative;top:10px;right: 10px;">
+               ${array[i].price}
+               </div>
+           </div>
+           <div class="Rent">
+               <button class="button Rent-botton" id="rentcars">
+                   Rent Now
+               </button>
+
+           </div>
+
+       </div>
+   </div>`)
+     }
+   } 
+})
+   /******************************Delete cars************************************************************ */
+
+    
+   $('#deletecar').on('click',function(){
+      garage.removeCars()
+         alert('your car has removed')   
+     })
+
+     /*****************************Mpdify car*************************************************** */
+   
+          
+$('#modify').on('click',function(){
+   var model = $("#model").val();
+   var color = $("#color").val();
+   var type = $("#type").val();
+   var state = $("#state").val();
+   var price = $("#Price").val();
+   var location = $("#location").val();
+   var id = $("#id").val();
 
 
+   garage.modifyCars(id,model,type,color,location,state,price)
+   console.log(model)
+   console.log(color)
+   console.log(type)
+   console.log(state)
+   console.log(price)
+   console.log(price)
+   console.log(location)
+   console.log(id)
+   console.log(model)
+  
 
-  $('#deletecar').on('click',function(){
-   garage.removeCars()
-      alert('your car has removed')   
+     alert('your car has modify')   
   })
   
+
      
-
-  
     
 
 
